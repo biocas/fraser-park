@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Fraser Park FC History</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="bootstrap-4/css/bootstrap-grid.min.css">
+    <style>
+    /* icon fonts */
+     @import url(http://weloveiconfonts.com/api/?family=entypo);
+    /* entypo */
+    [class*="entypo-"]:before {
+      font-family: 'entypo', sans-serif; 
+    }
+     </style>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     <script> src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.js"
+      </script>
+  </head>
+  <body>
+<div class="container">
+     
+    <header class="row">
+        <div class="col-md-3 col-xs-3">
+            <img src="img/logofinal.png" alt="logo">
+        </div>
+          <nav class="navbar navbar-light bg-faded justify-content-between"> 
+              <a class="nav-link entypo-facebook" href="https://www.facebook.com/fraserparkfc/"></a>
+              <a class="nav-link entypo-instagrem" href="https://www.instagram.com/FraserParkFC/"></a>
+              <a class="nav-link entypo-twitter" href="https://twitter.com/FraserParkFC"></a>
+          </nav>
+           <nav class="navbar navbar-light bg-faded justify-content-between">
+              <form class="form-inline">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </nav>
+      </header> 
+    <nav class="row navbar navbar-toggleable-md navbar-light bg-faded">
+          <div class="col-md-2 col-xs-2 nav nav-item nav-link">
+             <a href="index.html">HOME</a> 
+          </div>
+          <div class="col-md-2 col-xs-2 nav nav-item nav-link">
+             <a href="about.html">ABOUT</a> 
+          </div>
+          <div class="col-md-2 col-xs-2 nav nav-item nav-link">
+             <a href="teams.html">TEAMS</a> 
+          </div>
+          <div class="col-md-2 col-xs-2 nav nav-item nav-link">
+             <a href="sponsors.html">SPONSORS</a> 
+          </div>
+          <div class="col-md-2 col-xs-2 nav nav-item nav-link">
+             <a href="contact.html">CONTACT</a> 
+          </div>
+          <div class="col-md-2 col-xs-2 nav nav-item nav-link">
+             <a href="https://www.kikoff.com.au/locations/kikoff-fraser-park/">KIKOFF</a> 
+          </div>
+      </nav>
+      
+    <form class="form-horizontal" role="form" method="post" action="index.php">
+	<div class="form-group">
+		<label for="name" class="col-sm-2 control-label">Name</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
+			<?php echo "<p class='text-danger'>$errName</p>";?>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="email" class="col-sm-2 control-label">Email</label>
+		<div class="col-sm-10">
+			<input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="<?php echo htmlspecialchars($_POST['email']); ?>">
+			<?php echo "<p class='text-danger'>$errEmail</p>";?>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="message" class="col-sm-2 control-label">Message</label>
+		<div class="col-sm-10">
+			<textarea class="form-control" rows="4" name="message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
+			<?php echo "<p class='text-danger'>$errMessage</p>";?>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+                <?php echo "<p class='text-danger'>$errHuman</p>";?>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+                <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+            </div>
+        </div>
+	    <div class="form-group">
+		<div class="col-sm-10 col-sm-offset-2">
+			<?php echo $result; ?>	
+		</div>
+	    </div>
+    </form>  
+      
+    <!-- GOOGLE MAPS -->
+    <iframe
+      width="80%"
+      height="300"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDiDB3ROaGrTui47mPx1VQQHrsj6qx8zC4
+        &q=Sydney+Portugal+Community+Club" allowfullscreen>
+    </iframe>
+</div>
